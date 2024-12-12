@@ -33,3 +33,22 @@ export {
     SettingsIcon,
     ExitToAppIcon,
 }
+
+export default {
+    HomeOutlinedIcon,
+    ArrowForwardIosIcon,
+    ArrowBackIosIcon,
+    PeopleOutlinedIcon,
+    ReceiptOutlinedIcon,
+    BarChartOutlinedIcon,
+    MapOutlinedIcon,
+    GroupsIcon,
+    OndemandVideoIcon,
+    VideoCallIcon,
+    WebIcon,
+    QuizIcon,
+    WysiwygIcon,
+    ManageHistoryIcon,
+    SettingsIcon,
+    ExitToAppIcon,
+  };

@@ -7,9 +7,11 @@ import TeacherSidebar from "../../components/Teacher/sidebar/TeacherSidebar"
 import TeacherDashHero from '@/app/components/Teacher/TeacherDashHero';
 import AllUsers from '@/app/components/Teacher/Users/AllUsers';
 
-type Props = {}
+type Props = {
+  id: string;
+}
 
-const page = (props: Props) => {
+const page = ({ id }: Props) => {
 
     return ( 
         <div>
@@ -25,7 +27,7 @@ const page = (props: Props) => {
             </div>
             <div className="w-[85%] ">
              
-              <AllUsers />
+              <AllUsers id={id}/>
             </div>
           </div>
         </TeacherProtected>

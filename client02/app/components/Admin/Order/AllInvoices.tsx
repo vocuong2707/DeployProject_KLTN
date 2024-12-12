@@ -8,6 +8,7 @@ import { useGetAllUsersQuery } from "@/redux/features/user/userApi";
 import { useGetAllCoursesQuery } from "@/redux/features/courses/coursesApi";
 import { AiOutlineMail } from "react-icons/ai"; // Import the mail icon
 import Loader from "../../Loader/Loader";
+import { Numbers } from "@mui/icons-material";
 
 type Props = {
   isDashboard?: boolean;
@@ -42,7 +43,7 @@ const AllInvoices = ({ isDashboard }: Props) => {
     }
   }, [data, usersData, coursesData]); // Fixed variable name for usersData and coursesData
 
-  const columns: any = [
+  const columns = [
     { field: "id", headerName: "ID", flex: 0.3 },
     {
       field: "userName",
@@ -147,7 +148,7 @@ const AllInvoices = ({ isDashboard }: Props) => {
               checkboxSelection={isDashboard ? false : true}
               rows={rows}
               columns={columns}
-              components={isDashboard ? {} : { Toolbar: GridToolbar }}
+              // components={isDashboard ? {} : { Toolbar: GridToolbar}}
               sx={{
                 height: isDashboard ? "35vh" : "90vh",
                 overflow: "hidden",

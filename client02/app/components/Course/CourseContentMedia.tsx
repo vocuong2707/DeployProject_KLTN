@@ -800,12 +800,14 @@ const CommentReply = ({
 
 const CommentItem = ({
   setQuestionId,
+  activeVideo,
   answer,
   handleAnswerSubmit,
   item,
   setAnswer,
   answerCreationLoading,
-}) => {
+  data
+}: any) => {
   const [replyActive, setreplyActive] = useState(false);
 
   return (

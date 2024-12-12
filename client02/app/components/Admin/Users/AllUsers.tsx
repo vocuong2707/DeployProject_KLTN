@@ -20,13 +20,16 @@ const AllUsers: FC = () => {
   const [editRole, setEditRole] = useState<{ id: string; role: string } | null>(null);
 
   useEffect(() => {
-    if (data?.users && Array.isArray(data.users)) {
+    if (data?.users ) {
+      console.log('====================================');
+      console.log("data: " , data);
+      console.log('====================================');
       const newRows = data.users.map((item: any) => ({
         id: item._id,
         name: item.name,
         email: item.email,
-        role: item.role,
-        courses: item.courses.length,
+        role: item.role || null,
+        courses: item?.courses,
         created_at: format(item.createdAt),
       }));
       setRows(newRows);
@@ -66,8 +69,14 @@ const AllUsers: FC = () => {
         return editRole?.id === params.row.id ? (
           <Box display="flex" gap={1}>
             <Select
-              value={editRole.role}
-              onChange={(e) => setEditRole({ ...editRole, role: e.target.value })}
+              value={editRole?.role || ""}
+              onChange={(e) => {
+                const value = e.target.value || '';
+                setEditRole({
+                  id: editRole?.id || '', // Đảm bảo id luôn là string
+                  role: value,
+                });
+              }}
               fullWidth
             >
               <MenuItem value="User">User</MenuItem>

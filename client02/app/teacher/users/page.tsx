@@ -7,11 +7,9 @@ import TeacherSidebar from "../../components/Teacher/sidebar/TeacherSidebar"
 import TeacherDashHero from '@/app/components/Teacher/TeacherDashHero';
 import AllUsers from '../../components/Teacher/Users/AllUsers';
 
-type Props = {
-  id: string;
-}
 
-const page:FC<Props> = (id ) => {
+
+const page = ( ) => {
 
     return ( 
         <div>

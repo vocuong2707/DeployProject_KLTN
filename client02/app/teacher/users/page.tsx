@@ -11,7 +11,7 @@ type Props = {
   id: string;
 }
 
-const page:FC<Props> = ({ id }) => {
+const page:FC<Props> = (id ) => {
 
     return ( 
         <div>
@@ -27,7 +27,7 @@ const page:FC<Props> = ({ id }) => {
             </div>
             <div className="w-[85%] ">
              
-              <AllUsers id={id}/>
+              <AllUsers />
             </div>
           </div>
         </TeacherProtected>

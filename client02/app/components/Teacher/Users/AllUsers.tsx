@@ -11,17 +11,16 @@ import {
   useDeleteUsersMutation,
   useGetUsersByIdsMutation,
   useGetAllUserByCourseQuery,
+  useGetAllUsersQuery,
 } from '@/redux/features/user/userApi';
 import { Style } from '@/app/style/stylelogin';
 import toast from 'react-hot-toast';
 
-type Props = {
-  id: string;
-};
 
-const AllUsers: FC<Props> = ({ id }) => {
+
+const AllUsers = () => {
   const { theme } = useTheme();
-  const { isLoading: isCourseLoading, data: dataCourse } = useGetAllUserByCourseQuery(id, {
+  const { isLoading: isCourseLoading, data: dataCourse } = useGetAllUsersQuery({},{
     refetchOnMountOrArgChange: true,
   });
   const [getUsersByIds] = useGetUsersByIdsMutation();

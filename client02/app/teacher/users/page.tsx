@@ -1,17 +1,17 @@
 'use client'
 
 import Heading from '@/app/Utils/Heading'
-import React from 'react'
+import React, { FC } from 'react'
 import TeacherProtected from '@/app/hooks/teacherProtected';
 import TeacherSidebar from "../../components/Teacher/sidebar/TeacherSidebar"
 import TeacherDashHero from '@/app/components/Teacher/TeacherDashHero';
-import AllUsers from '@/app/components/Teacher/Users/AllUsers';
+import AllUsers from '../../components/Teacher/Users/AllUsers';
 
 type Props = {
   id: string;
 }
 
-const page = ({ id }: Props) => {
+const page:FC<Props> = ({ id }) => {
 
     return ( 
         <div>

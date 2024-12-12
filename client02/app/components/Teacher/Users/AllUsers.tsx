@@ -19,7 +19,7 @@ type Props = {
   id: string;
 };
 
-const AllUsers: FC<Props> = ({ id }: Props) => {
+const AllUsers: FC<Props> = ({ id }) => {
   const { theme } = useTheme();
   const { isLoading: isCourseLoading, data: dataCourse } = useGetAllUserByCourseQuery(id, {
     refetchOnMountOrArgChange: true,

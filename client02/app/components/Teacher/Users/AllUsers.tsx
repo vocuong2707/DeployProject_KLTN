@@ -15,13 +15,11 @@ import {
 import { Style } from '@/app/style/stylelogin';
 import toast from 'react-hot-toast';
 
-type Props = {
-  id: string;
-};
 
-const AllUsers: FC<Props> = ({ id }: Props) => {
+
+const AllUsers = () => {
   const { theme } = useTheme();
-  const { isLoading: isCourseLoading, data: dataCourse } = useGetAllUserByCourseQuery(id, {
+  const { isLoading: isCourseLoading, data: dataCourse } = useGetAllUserByCourseQuery({}, {
     refetchOnMountOrArgChange: true,
   });
   const [getUsersByIds] = useGetUsersByIdsMutation();

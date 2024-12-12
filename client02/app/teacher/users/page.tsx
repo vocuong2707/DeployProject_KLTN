@@ -7,9 +7,9 @@ import TeacherSidebar from "../../components/Teacher/sidebar/TeacherSidebar"
 import TeacherDashHero from '@/app/components/Teacher/TeacherDashHero';
 import AllUsers from '@/app/components/Teacher/Users/AllUsers';
 
-type Props = {}
 
-const page = (props: Props) => {
+
+const page = () => {
 
     return ( 
         <div>
